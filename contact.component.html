@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function validate() { 
+    let name = 
+        document.getElementById("name").value; 
+    let password = 
+        document.getElementById("password").value; 
+    let email = 
+        document.getElementById("email").value; 
+    let phone = 
+        document.getElementById("phone").value; 
+    let error_message = 
+        document.getElementById("error_message"); 
+        let errors = []; 
+    if (name.length < 5) { 
+        errors.push("Please Enter a valid Name");} 
+    if (password.length > 7) { 
+        errors.push("Please Enter a valid password");} 
+    if (isNaN(phone) || phone.length != 10) { 
+        errors.push("Please Enter a valid Phone Number");} 
+    if (email.indexOf("@") == -1 || email.length < 6) { 
+        errors.push( 
+            "Please Enter a valid Email");} 
+    if (errors.length > 0) { 
+        error_message.innerHTML = 
+            errors.join("<br>"); 
+        return false;} 
+    else { 
+        alert( 
+            "Form Submitted Successfully!"); 
+        return true;}}
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <br>
+    <form action="" 
+    id="myform" 
+    onsubmit="return validate();">
+        <fieldset>
+            <legend>Contact Form:</legend>
+            <p>
+                <label for="name" id="name" >Name: </label>
+                <input type="text" name="name" id="name" 
+                placeholder="Enter your name..">
+            </p>
+            <p>
+                <label for="email" id="email" >Email: </label>
+                <input type="email" name="email" id="email" 
+                placeholder="Enter your email...">
+            </p>
+            <p>
+                <label for="phone" id="phone" >Phone Number: </label>
+                <input type="tel" name="phone" id="phone" 
+                placeholder="Enter your phone number...">
+            </p>
+            <label for="message">Feedback or message:</label><br>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+            <br>
+<br>
+            <div class="btn">
+            <button type="submit">Submit</button></div>
+            <p> </p>
+           
+        </fieldset>
+    </form>
+    <br>
+    <hr>
+    <footer>
+      <p>&copy; 2024 Course Management System</p>
+    </footer>
+</body>
+</html>
