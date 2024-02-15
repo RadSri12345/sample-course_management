@@ -1,0 +1,40 @@
+<header>
+
+<h1>Course Management System</h1>
+<div class="container mx-auto" style="background-color: chocolate;">
+ <style>
+ #navbar li{
+   display:inline-block;
+ }
+
+  #navbar ul{
+   padding: 10px;;
+   list-style:none;
+ }
+ #navbar a{
+   color:#00f;
+   text-decoration:none;
+   font-size:18px;
+   padding-right:25px;
+ }
+ </style>
+ <nav id="navbar"><ul class="flex" style="list-style-type: none;">
+  <li>
+    <a [routerLink]="['']">Home</a>
+  </li>
+  <li>
+    <a [routerLink]="['courses']">Courses</a>
+  </li>
+  <li>
+    <a [routerLink]="['course-details']">Course-Details</a>
+  </li>
+  <li>
+    <a [routerLink]="['edit-course']">Edit Courses</a>
+  </li>
+  <li>
+    <a [routerLink]="['contact']">Contact</a>
+  </li>
+ </ul>
+</nav></div>
+</header>
+<router-outlet></router-outlet>
